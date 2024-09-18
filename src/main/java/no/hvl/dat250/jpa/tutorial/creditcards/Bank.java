@@ -9,17 +9,20 @@ public class Bank {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
+    @OneToMany(mappedBy = "bank")
+    private Collection<CreditCard> creditCards;
+
     public Long getId() {
         return id;
     }
 
     public String getName() {
-        // TODO: implement method!
-        return null;
+        return name;
     }
 
     public Collection<CreditCard> getOwnedCards() {
-        // TODO: implement method!
-        return null;
+        return creditCards;
     }
 }
