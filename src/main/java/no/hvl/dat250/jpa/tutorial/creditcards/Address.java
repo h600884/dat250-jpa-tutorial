@@ -1,6 +1,5 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,5 +36,4 @@ public class Address {
     public Set<Customer> getOwners() {
         return owners;
     }
-
 }

@@ -1,7 +1,6 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
-
 import java.util.Set;
 
 @Entity
@@ -10,11 +9,10 @@ public class Pincode {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private String pincode;
     private Integer count;
 
-    @OneToMany(mappedBy = "pincode")
+    @OneToMany
     private Set<CreditCard> creditCard;
 
     public Pincode() {

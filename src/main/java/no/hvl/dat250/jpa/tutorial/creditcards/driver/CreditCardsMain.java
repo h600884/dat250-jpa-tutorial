@@ -3,8 +3,6 @@ package no.hvl.dat250.jpa.tutorial.creditcards.driver;
 import jakarta.persistence.*;
 import no.hvl.dat250.jpa.tutorial.creditcards.*;
 
-import java.util.Set;
-
 public class CreditCardsMain {
 
   static final String PERSISTENCE_UNIT_NAME = "jpa-tutorial";
@@ -20,11 +18,9 @@ public class CreditCardsMain {
   }
 
   private static void createObjects(EntityManager em) {
-    // TODO: Create object world as shown in the README.md.
     Customer customer = new Customer("Max Mustermann");
 
     Address address = new Address("Inndalsveien", 28);
-
     customer.getAddresses().add(address);
 
     Bank bank = new Bank("Pengebank");
