@@ -2,7 +2,7 @@ package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Pincode {
@@ -15,7 +15,15 @@ public class Pincode {
     private Integer count;
 
     @OneToMany(mappedBy = "pincode")
-    private List<CreditCard> creditCard;
+    private Set<CreditCard> creditCard;
+
+    public Pincode() {
+    }
+
+    public Pincode(String pincode, Integer count) {
+        this.pincode = pincode;
+        this.count = count;
+    }
 
     public Long getId() {
         return id;

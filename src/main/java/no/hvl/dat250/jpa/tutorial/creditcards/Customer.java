@@ -1,6 +1,10 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -12,20 +16,27 @@ public class Customer {
     private String name;
 
     @ManyToMany
-    private Collection<Address> addresses;
+    private Set<Address> addresses = new HashSet<>();
 
-    @OneToMany(mappedBy = "customer")
-    private Collection<CreditCard> creditCards;
+    @ManyToMany
+    private Set<CreditCard> creditCards = new HashSet<>();
+
+    public Customer() {
+    }
+
+    public Customer(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
     }
 
-    public Collection<Address> getAddresses() {
+    public Set<Address> getAddresses() {
         return addresses;
     }
 
-    public Collection<CreditCard> getCreditCards() {
+    public Set<CreditCard> getCreditCards() {
         return creditCards;
     }
 }

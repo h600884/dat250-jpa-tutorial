@@ -14,16 +14,21 @@ public class CreditCard {
     private Integer balance;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
-
-    @ManyToOne
     @JoinColumn(name = "bank_id")
     private Bank bank;
 
     @ManyToOne
     @JoinColumn(name = "pincode_id")
     private Pincode pincode;
+
+    public CreditCard() {
+    }
+
+    public CreditCard(Integer number, Integer creditLimit, Integer balance) {
+        this.number = number;
+        this.creditLimit = creditLimit;
+        this.balance = balance;
+    }
 
     public Integer getNumber() {
         return number;
@@ -41,7 +46,15 @@ public class CreditCard {
         return pincode;
     }
 
+    public void setPincode(Pincode pincode) {
+        this.pincode = pincode;
+    }
+
     public Bank getOwningBank() {
         return bank;
+    }
+
+    public void setOwningBank(Bank bank) {
+        this.bank = bank;
     }
 }
