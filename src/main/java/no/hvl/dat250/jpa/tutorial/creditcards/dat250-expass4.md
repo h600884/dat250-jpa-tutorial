@@ -9,7 +9,7 @@ There was a need to ensure proper bidirectional relationships between entities w
 Resolution: I decided to stick with using setter methods for setting a credit card to be owned by the bank I created and too add a pincode to the credit card.
 
 Here you can see an example of how some of the databases looks. 
-![Skjermbilde 2024-09-18 kl. 20.44.10.png](..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fs3%2Fl3y1b0nj3535s5vfsr0sbtn40000gp%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_WIW2ND%2FSkjermbilde%202024 -09-18%20kl.%2020.44.10.png)
+<img width="435" alt="Skjermbilde 2024-09-18 kl  20 56 52" src="https://github.com/user-attachments/assets/3edd4b7e-da0d-4bc9-9939-228a65a5088c">
 
 As of now, there are no significant unresolved issues. The entities are correctly persisting in the database, and the test cases pass as expected.
 
