@@ -3,7 +3,7 @@
 #### Technical problems and solutions:
 
 While testing, I ran into a NullPointerException when trying to persist entities with relationships (such as Customer and CreditCard). The issue arose from not properly initializing collections that mapped relationships.
-Resolution: I made sure to initialize collections such as Set<CreditCard> in the entity constructors. This ensured that when relationships were added, they were properly tracked by the persistence context.
+Resolution: I made sure to initialize collections such as Set<CreditCard>. This ensured that when relationships were added, they were properly tracked by the persistence context.
 
 There was a need to ensure proper bidirectional relationships between entities without relying on setter methods. This included managing CreditCard ownership by a Bank and setting a pincode to the card. Instead of creating setter methods, I could have adjusted the constructors to handle these relationships at the moment of instantiation.
 Resolution: I decided to stick with using setter methods for setting a credit card to be owned by the bank I created and too add a pincode to the credit card.
